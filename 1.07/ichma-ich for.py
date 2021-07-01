@@ -58,3 +58,5 @@ numbers = [2, 1, 6, 7]
 for number in numbers:  # number = 2
     for i in range(number):  # 0, 1
         print(number)
+else:
+    print(f"Sikl {number} soni bilan Tugadi!")

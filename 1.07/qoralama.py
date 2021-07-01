@@ -1,2 +1,4 @@
-for i in range(7):
-    print("salom")
+import random
+
+for i in range(10):
+    print(random.randint(1, 10))
