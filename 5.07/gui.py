@@ -1,47 +1,31 @@
-# This will import all the widgets
-# and modules which are available in
-# tkinter and ttk module
+# Import the required Libraries
 from tkinter import *
-from tkinter.ttk import *
+from tkinter import ttk
 
-# creates a Tk() object
-master = Tk()
-
-# sets the geometry of main
-# root window
-master.geometry("200x200")
+# Create an instance of tkinter frame
+win = Tk()
+# Set the geometry of tkinter frame
+win.geometry("750x250")
 
 
-# function to open a new window
-# on a button click
-def openNewWindow():
-    # Toplevel object which will
-    # be treated as a new window
-    newWindow = Toplevel(master)
-
-    # sets the title of the
-    # Toplevel widget
-    newWindow.title("New Window")
-
-    # sets the geometry of toplevel
-    newWindow.geometry("200x200")
-
-    # A Label widget to show in toplevel
-    Label(newWindow,
-          text="This is a new window").pack()
+# Define a function to show a message
+def myclick():
+    message = "Hello " + entry.get()
+    label = Label(frame, text=message, font=('Times New Roman', 14, 'italic'))
+    entry.delete(0, 'end')
+    label.pack(pady=30)
 
 
-label = Label(master,
-              text="This is the main window")
+# Creates a Frame
+frame = LabelFrame(win, width=400, height=180, bd=5)
+frame.pack()
+# Stop the frame from propagating the widget to be shrink or fit
+frame.pack_propagate(False)
 
-label.pack(pady=10)
-
-# a button widget which will open a
-# new window on button click
-btn = Button(master,
-             text="Click to open a new window",
-             command=openNewWindow)
-btn.pack(pady=10)
-
-# mainloop, runs infinitely
-mainloop()
+# Create an Entry widget in the Frame
+entry = ttk.Entry(frame, width=40)
+entry.insert(INSERT, "Enter Your Name")
+entry.pack()
+# Create a Button
+ttk.Button(win, text="Click", command=myclick).pack(pady=20)
+win.mainloop()
