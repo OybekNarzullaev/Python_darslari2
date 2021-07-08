@@ -7,10 +7,10 @@ print(type(numbers))
 print(type(numbers1))
 
 # ! kortejni yangilab bo'lmaydi
-# numbers[4] = 4 # bu xato ish
+# numbers[0] = 4 # bu xato ish
 
 print('-------------------------------------')
-""" konstruktor """
+""" konstruktor tuple()"""
 a = tuple([1, 2, 3, 4])
 print(type(a))
 
@@ -29,7 +29,7 @@ numbers = list(numbers)
 # endi yangilaymiz
 numbers[1] = 9
 
-# endi ro'yhatni kortejga aylantiraman
+# endi ro'yhatni yana kortejga aylantiraman
 numbers = tuple(numbers)
 print(numbers)
 
@@ -70,7 +70,7 @@ print('-------------------------------------')
 numbers = (1, 2, 3, 4, 4, 3, 2, 2)
 
 # count()
-print(numbers.count(2))
+print(numbers.count(2))  # bu kortejni ichida nechta ikki bor degani
 
 # index()
 print(numbers.index(2))
@@ -91,4 +91,8 @@ d = ()
 e = 0
 h = False
 print(f" {bool(a)} {bool(b)} {bool(c)} {bool(d)} {bool(e)} {bool(h)}")
+
+# git add .
+# git commit -m "ixtiyoriy xabar"
+# git push
 

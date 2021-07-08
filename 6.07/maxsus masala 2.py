@@ -14,3 +14,7 @@ for i in range(int(len(b)/2) + 1):
 a = tuple(c)
 print(a)
 
+# git add .
+# git commit -m "xabar"
+# git push
+
