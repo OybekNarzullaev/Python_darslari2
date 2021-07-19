@@ -456,7 +456,8 @@ def our_snake(snake_block, snake_list):
         pygame.draw.rect(dis, black, [x[0], x[1], snake_block, snake_block])
 
 def block():
-    pygame.draw.rect(dis, green, [dis_width/2, dis_height/2, 100, 100])
+    pygame.draw.rect(dis, green, [dis_width/2, dis_height/2, 50, 150])
+    pygame.draw.rect(dis, green, [dis_width / 2, dis_height / 2, 150, 50])
 def message(msg, color):
     mesg = font_style.render(msg, True, color)
     dis.blit(mesg, [dis_width / 6, dis_height / 3])
